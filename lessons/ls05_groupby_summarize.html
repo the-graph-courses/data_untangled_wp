@@ -1926,22 +1926,15 @@ survey conducted in Yaounde, Cameroon.</p>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>yao</span></code></pre></div>
 <pre><code>## # A tibble: 971 × 15
-##      age age_catego…¹ sex   weigh…² heigh…³ neigh…⁴ is_sm…⁵ is_pr…⁶ occup…⁷ treat…⁸ sympt…⁹
-##    &lt;dbl&gt; &lt;chr&gt;        &lt;chr&gt;   &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;  
-##  1    45 Adult        Fema…      95     169 Brique… Non-sm… No      Inform… Parace… Muscle…
-##  2    55 Adult        Male       96     185 Brique… Ex-smo… &lt;NA&gt;    Salari… &lt;NA&gt;    No sym…
-##  3    23 Adult        Male       74     180 Brique… Smoker  &lt;NA&gt;    Student &lt;NA&gt;    No sym…
-##  4    20 Adult        Fema…      70     164 Brique… Non-sm… No      Student Antibi… Rhinit…
-##  5    55 Adult        Fema…      67     147 Brique… Non-sm… No      Trader… &lt;NA&gt;    No sym…
-##  6    17 Child        Fema…      65     162 Brique… Non-sm… No      Student Parace… Fever-…
-##  7    13 Child        Fema…      65     150 Brique… Non-sm… No      Student Tradit… Sneezi…
-##  8    28 Adult        Male       62     173 Brique… Non-sm… &lt;NA&gt;    Student Parace… Headac…
-##  9    30 Adult        Male       73     170 Brique… Non-sm… &lt;NA&gt;    Trader  Parace… Fever-…
-## 10    13 Child        Fema…      56     153 Brique… Non-sm… No      Other   &lt;NA&gt;    No sym…
-## # … with 961 more rows, 4 more variables: n_days_miss_work &lt;dbl&gt;, n_bedridden_days &lt;dbl&gt;,
-## #   highest_education &lt;chr&gt;, igg_result &lt;chr&gt;, and abbreviated variable names
-## #   ¹​age_category_3, ²​weight_kg, ³​height_cm, ⁴​neighborhood, ⁵​is_smoker, ⁶​is_pregnant,
-## #   ⁷​occupation, ⁸​treatment_combinations, ⁹​symptoms</code></pre>
+##     age age_category_3 sex    weight_kg height_cm neighborhood
+##   &lt;dbl&gt; &lt;chr&gt;          &lt;chr&gt;      &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;       
+## 1    45 Adult          Female        95       169 Briqueterie 
+## 2    55 Adult          Male          96       185 Briqueterie 
+## 3    23 Adult          Male          74       180 Briqueterie 
+## 4    20 Adult          Female        70       164 Briqueterie 
+## 5    55 Adult          Female        67       147 Briqueterie 
+## # … with 966 more rows, and 9 more variables: is_smoker &lt;chr&gt;,
+## #   is_pregnant &lt;chr&gt;, occupation &lt;chr&gt;, …</code></pre>
 <p>See the first lesson in this chapter for more information about this
 dataset.</p>
 </div>
@@ -2091,22 +2084,15 @@ effect:</p>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(sex)</span></code></pre></div>
 <pre><code>## # A tibble: 971 × 15
 ## # Groups:   sex [2]
-##      age age_catego…¹ sex   weigh…² heigh…³ neigh…⁴ is_sm…⁵ is_pr…⁶ occup…⁷ treat…⁸ sympt…⁹
-##    &lt;dbl&gt; &lt;chr&gt;        &lt;chr&gt;   &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;  
-##  1    45 Adult        Fema…      95     169 Brique… Non-sm… No      Inform… Parace… Muscle…
-##  2    55 Adult        Male       96     185 Brique… Ex-smo… &lt;NA&gt;    Salari… &lt;NA&gt;    No sym…
-##  3    23 Adult        Male       74     180 Brique… Smoker  &lt;NA&gt;    Student &lt;NA&gt;    No sym…
-##  4    20 Adult        Fema…      70     164 Brique… Non-sm… No      Student Antibi… Rhinit…
-##  5    55 Adult        Fema…      67     147 Brique… Non-sm… No      Trader… &lt;NA&gt;    No sym…
-##  6    17 Child        Fema…      65     162 Brique… Non-sm… No      Student Parace… Fever-…
-##  7    13 Child        Fema…      65     150 Brique… Non-sm… No      Student Tradit… Sneezi…
-##  8    28 Adult        Male       62     173 Brique… Non-sm… &lt;NA&gt;    Student Parace… Headac…
-##  9    30 Adult        Male       73     170 Brique… Non-sm… &lt;NA&gt;    Trader  Parace… Fever-…
-## 10    13 Child        Fema…      56     153 Brique… Non-sm… No      Other   &lt;NA&gt;    No sym…
-## # … with 961 more rows, 4 more variables: n_days_miss_work &lt;dbl&gt;, n_bedridden_days &lt;dbl&gt;,
-## #   highest_education &lt;chr&gt;, igg_result &lt;chr&gt;, and abbreviated variable names
-## #   ¹​age_category_3, ²​weight_kg, ³​height_cm, ⁴​neighborhood, ⁵​is_smoker, ⁶​is_pregnant,
-## #   ⁷​occupation, ⁸​treatment_combinations, ⁹​symptoms</code></pre>
+##     age age_category_3 sex    weight_kg height_cm neighborhood
+##   &lt;dbl&gt; &lt;chr&gt;          &lt;chr&gt;      &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;       
+## 1    45 Adult          Female        95       169 Briqueterie 
+## 2    55 Adult          Male          96       185 Briqueterie 
+## 3    23 Adult          Male          74       180 Briqueterie 
+## 4    20 Adult          Female        70       164 Briqueterie 
+## 5    55 Adult          Female        67       147 Briqueterie 
+## # … with 966 more rows, and 9 more variables: is_smoker &lt;chr&gt;,
+## #   is_pregnant &lt;chr&gt;, occupation &lt;chr&gt;, …</code></pre>
 <p>Hmm. Apparently nothing happened. The one thing you <em>might</em>
 notice is a new section in the header that tells you the grouped-by
 variable (sex) and the number of groups (2):</p>
@@ -2150,10 +2136,7 @@ and <code>min()</code> functions inside <code>summarize()</code>:</p>
 ## 3 Cité Verte          118         16
 ## 4 Ekoudou             135         15
 ## 5 Messa                96         19
-## 6 Mokolo              162         16
-## 7 Nkomkana            161         15
-## 8 Tsinga              105         15
-## 9 Tsinga Oliga        100         17</code></pre>
+## # … with 4 more rows</code></pre>
 <p>Great! With just a few code lines you are able to extract quite a bit
 of information.</p>
 <hr />
@@ -2165,19 +2148,14 @@ variable:</p>
 <div class="sourceCode" id="cb21"><pre class="sourceCode r tgc-code-block"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>yao <span class="sc">%&gt;%</span> </span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(n_days_miss_work)</span></code></pre></div>
 <pre><code>## # A tibble: 971 × 1
-##    n_days_miss_work
-##               &lt;dbl&gt;
-##  1                0
-##  2               NA
-##  3               NA
-##  4                7
-##  5               NA
-##  6                7
-##  7                0
-##  8                0
-##  9                0
-## 10               NA
-## # … with 961 more rows</code></pre>
+##   n_days_miss_work
+##              &lt;dbl&gt;
+## 1                0
+## 2               NA
+## 3               NA
+## 4                7
+## 5               NA
+## # … with 966 more rows</code></pre>
 <p>To count the total number of work days missed for each sex group, you
 could try to run the <code>sum()</code> function on the
 <code>n_days_miss_work</code> variable:</p>
@@ -2332,26 +2310,14 @@ and women <em>in each neighbourhood</em> (rather than the mean age of
 <pre><code>## `summarise()` has grouped output by &#39;sex&#39;. You can override using the `.groups` argument.</code></pre>
 <pre><code>## # A tibble: 18 × 3
 ## # Groups:   sex [2]
-##    sex    neighborhood mean_age
-##    &lt;chr&gt;  &lt;chr&gt;           &lt;dbl&gt;
-##  1 Female Briqueterie      31.6
-##  2 Female Carriere         28.2
-##  3 Female Cité Verte       31.8
-##  4 Female Ekoudou          29.3
-##  5 Female Messa            30.2
-##  6 Female Mokolo           28.0
-##  7 Female Nkomkana         33.0
-##  8 Female Tsinga           30.6
-##  9 Female Tsinga Oliga     24.3
-## 10 Male   Briqueterie      33.7
-## 11 Male   Carriere         30.0
-## 12 Male   Cité Verte       27.0
-## 13 Male   Ekoudou          25.2
-## 14 Male   Messa            23.9
-## 15 Male   Mokolo           30.5
-## 16 Male   Nkomkana         29.8
-## 17 Male   Tsinga           28.8
-## 18 Male   Tsinga Oliga     24.3</code></pre>
+##   sex    neighborhood mean_age
+##   &lt;chr&gt;  &lt;chr&gt;           &lt;dbl&gt;
+## 1 Female Briqueterie      31.6
+## 2 Female Carriere         28.2
+## 3 Female Cité Verte       31.8
+## 4 Female Ekoudou          29.3
+## 5 Female Messa            30.2
+## # … with 13 more rows</code></pre>
 <p>From this output data frame you can tell that, for example, women
 from Briqueterie have a mean age of 31.6 years, while men from
 Briqueterie have a mean age of 33.7 years.</p>
@@ -2362,30 +2328,17 @@ result, although it will be ordered differently:</p>
 <div class="sourceCode" id="cb33"><pre class="sourceCode r tgc-code-block"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>yao <span class="sc">%&gt;%</span> </span>
 <span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(neighborhood, sex) <span class="sc">%&gt;%</span> </span>
 <span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">mean_age =</span> <span class="fu">mean</span>(age))</span></code></pre></div>
-<pre><code>## `summarise()` has grouped output by &#39;neighborhood&#39;. You can override using the `.groups`
-## argument.</code></pre>
+<pre><code>## `summarise()` has grouped output by &#39;neighborhood&#39;. You can override using the `.groups` argument.</code></pre>
 <pre><code>## # A tibble: 18 × 3
 ## # Groups:   neighborhood [9]
-##    neighborhood sex    mean_age
-##    &lt;chr&gt;        &lt;chr&gt;     &lt;dbl&gt;
-##  1 Briqueterie  Female     31.6
-##  2 Briqueterie  Male       33.7
-##  3 Carriere     Female     28.2
-##  4 Carriere     Male       30.0
-##  5 Cité Verte   Female     31.8
-##  6 Cité Verte   Male       27.0
-##  7 Ekoudou      Female     29.3
-##  8 Ekoudou      Male       25.2
-##  9 Messa        Female     30.2
-## 10 Messa        Male       23.9
-## 11 Mokolo       Female     28.0
-## 12 Mokolo       Male       30.5
-## 13 Nkomkana     Female     33.0
-## 14 Nkomkana     Male       29.8
-## 15 Tsinga       Female     30.6
-## 16 Tsinga       Male       28.8
-## 17 Tsinga Oliga Female     24.3
-## 18 Tsinga Oliga Male       24.3</code></pre>
+##   neighborhood sex    mean_age
+##   &lt;chr&gt;        &lt;chr&gt;     &lt;dbl&gt;
+## 1 Briqueterie  Female     31.6
+## 2 Briqueterie  Male       33.7
+## 3 Carriere     Female     28.2
+## 4 Carriere     Male       30.0
+## 5 Cité Verte   Female     31.8
+## # … with 13 more rows</code></pre>
 <p>Now the column order is different: <code>neighborhood</code> is the
 first column, and <code>sex</code> is the second. And the row order is
 also different: rows are first ordered by <code>neighborhood</code>,
@@ -2481,26 +2434,14 @@ summarizing:</p>
 <pre><code>## `summarise()` has grouped output by &#39;sex&#39;. You can override using the `.groups` argument.</code></pre>
 <pre><code>## # A tibble: 18 × 3
 ## # Groups:   sex [2]
-##    sex    neighborhood mean_age
-##    &lt;chr&gt;  &lt;chr&gt;           &lt;dbl&gt;
-##  1 Female Briqueterie      31.6
-##  2 Female Carriere         28.2
-##  3 Female Cité Verte       31.8
-##  4 Female Ekoudou          29.3
-##  5 Female Messa            30.2
-##  6 Female Mokolo           28.0
-##  7 Female Nkomkana         33.0
-##  8 Female Tsinga           30.6
-##  9 Female Tsinga Oliga     24.3
-## 10 Male   Briqueterie      33.7
-## 11 Male   Carriere         30.0
-## 12 Male   Cité Verte       27.0
-## 13 Male   Ekoudou          25.2
-## 14 Male   Messa            23.9
-## 15 Male   Mokolo           30.5
-## 16 Male   Nkomkana         29.8
-## 17 Male   Tsinga           28.8
-## 18 Male   Tsinga Oliga     24.3</code></pre>
+##   sex    neighborhood mean_age
+##   &lt;chr&gt;  &lt;chr&gt;           &lt;dbl&gt;
+## 1 Female Briqueterie      31.6
+## 2 Female Carriere         28.2
+## 3 Female Cité Verte       31.8
+## 4 Female Ekoudou          29.3
+## 5 Female Messa            30.2
+## # … with 13 more rows</code></pre>
 <p>Now the header tells you that the data is still grouped by the first
 variable in <code>group_by()</code>, sex:</p>
 <pre><code>  # A tibble: 18 × 3
@@ -2519,26 +2460,14 @@ to just use <code>select(mean_age)</code>:</p>
 ## Adding missing grouping variables: `sex`</code></pre>
 <pre><code>## # A tibble: 18 × 2
 ## # Groups:   sex [2]
-##    sex    mean_age
-##    &lt;chr&gt;     &lt;dbl&gt;
-##  1 Female     31.6
-##  2 Female     28.2
-##  3 Female     31.8
-##  4 Female     29.3
-##  5 Female     30.2
-##  6 Female     28.0
-##  7 Female     33.0
-##  8 Female     30.6
-##  9 Female     24.3
-## 10 Male       33.7
-## 11 Male       30.0
-## 12 Male       27.0
-## 13 Male       25.2
-## 14 Male       23.9
-## 15 Male       30.5
-## 16 Male       29.8
-## 17 Male       28.8
-## 18 Male       24.3</code></pre>
+##   sex    mean_age
+##   &lt;chr&gt;     &lt;dbl&gt;
+## 1 Female     31.6
+## 2 Female     28.2
+## 3 Female     31.8
+## 4 Female     29.3
+## 5 Female     30.2
+## # … with 13 more rows</code></pre>
 <p>But as you can see, the grouped-by variable, <code>sex</code>, is
 <em>still</em> selected, even though we only asked for
 <code>mean_age</code> in the <code>select()</code> statement.</p>
@@ -2558,26 +2487,14 @@ chain. For example:</p>
 <span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span></code></pre></div>
 <pre><code>## `summarise()` has grouped output by &#39;sex&#39;. You can override using the `.groups` argument.</code></pre>
 <pre><code>## # A tibble: 18 × 3
-##    sex    neighborhood mean_age
-##    &lt;chr&gt;  &lt;chr&gt;           &lt;dbl&gt;
-##  1 Female Briqueterie      31.6
-##  2 Female Carriere         28.2
-##  3 Female Cité Verte       31.8
-##  4 Female Ekoudou          29.3
-##  5 Female Messa            30.2
-##  6 Female Mokolo           28.0
-##  7 Female Nkomkana         33.0
-##  8 Female Tsinga           30.6
-##  9 Female Tsinga Oliga     24.3
-## 10 Male   Briqueterie      33.7
-## 11 Male   Carriere         30.0
-## 12 Male   Cité Verte       27.0
-## 13 Male   Ekoudou          25.2
-## 14 Male   Messa            23.9
-## 15 Male   Mokolo           30.5
-## 16 Male   Nkomkana         29.8
-## 17 Male   Tsinga           28.8
-## 18 Male   Tsinga Oliga     24.3</code></pre>
+##   sex    neighborhood mean_age
+##   &lt;chr&gt;  &lt;chr&gt;           &lt;dbl&gt;
+## 1 Female Briqueterie      31.6
+## 2 Female Carriere         28.2
+## 3 Female Cité Verte       31.8
+## 4 Female Ekoudou          29.3
+## 5 Female Messa            30.2
+## # … with 13 more rows</code></pre>
 <p>Now that the data frame is ungrouped, it will behave like a normal
 data frame again. For example, you can <code>select()</code> any
 column(s) you want; you won’t have some unwanted columns tagging
@@ -2589,26 +2506,14 @@ along:</p>
 <span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(mean_age)</span></code></pre></div>
 <pre><code>## `summarise()` has grouped output by &#39;sex&#39;. You can override using the `.groups` argument.</code></pre>
 <pre><code>## # A tibble: 18 × 1
-##    mean_age
-##       &lt;dbl&gt;
-##  1     31.6
-##  2     28.2
-##  3     31.8
-##  4     29.3
-##  5     30.2
-##  6     28.0
-##  7     33.0
-##  8     30.6
-##  9     24.3
-## 10     33.7
-## 11     30.0
-## 12     27.0
-## 13     25.2
-## 14     23.9
-## 15     30.5
-## 16     29.8
-## 17     28.8
-## 18     24.3</code></pre>
+##   mean_age
+##      &lt;dbl&gt;
+## 1     31.6
+## 2     28.2
+## 3     31.8
+## 4     29.3
+## 5     30.2
+## # … with 13 more rows</code></pre>
 </div>
 <div id="counting-rows" class="section level1" number="9">
 <h1><span class="header-section-number">9</span> Counting rows</h1>
@@ -2634,10 +2539,7 @@ neighborhood group, you would run:</p>
 ## 3 Cité Verte      72
 ## 4 Ekoudou        190
 ## 5 Messa           48
-## 6 Mokolo          96
-## 7 Nkomkana        75
-## 8 Tsinga          81
-## 9 Tsinga Oliga    67</code></pre>
+## # … with 4 more rows</code></pre>
 <p>As you can see, the <code>n()</code> function does not require any
 arguments. It just “knows its job” in the data frame!</p>
 <hr />
@@ -2656,10 +2558,7 @@ mean age per neighborhood.</p>
 ## 3 Cité Verte      72     29.9
 ## 4 Ekoudou        190     27.6
 ## 5 Messa           48     27.3
-## 6 Mokolo          96     29.1
-## 7 Nkomkana        75     31.7
-## 8 Tsinga          81     29.7
-## 9 Tsinga Oliga    67     24.3</code></pre>
+## # … with 4 more rows</code></pre>
 <div class="practice">
 <p>Group your <code>yao</code> data frame by the respondents’ occupation
 (<code>occupation</code>) and use <code>summarize()</code> to count the
@@ -2709,10 +2608,7 @@ neighborhood, you place the condition <code>age &lt; 18</code> inside
 ## 3 Cité Verte               19
 ## 4 Ekoudou                  66
 ## 5 Messa                    18
-## 6 Mokolo                   32
-## 7 Nkomkana                 22
-## 8 Tsinga                   23
-## 9 Tsinga Oliga             25</code></pre>
+## # … with 4 more rows</code></pre>
 <hr />
 <p>Similarly, to count the number of people with doctorate degrees in
 each neighborhood, you place the condition
@@ -2729,10 +2625,7 @@ each neighborhood, you place the condition
 ## 3 Cité Verte                       1
 ## 4 Ekoudou                          1
 ## 5 Messa                            2
-## 6 Mokolo                           0
-## 7 Nkomkana                         4
-## 8 Tsinga                           3
-## 9 Tsinga Oliga                     3</code></pre>
+## # … with 4 more rows</code></pre>
 <div class="challenge">
 <p><strong>Under the hood: counting with conditions</strong></p>
 <p>Why are you able to use <code>sum()</code> which is meant to add
@@ -2752,19 +2645,14 @@ step-by-step way. Run through it and see if you can follow.</p>
 <span id="cb62-5"><a href="#cb62-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb62-6"><a href="#cb62-6" aria-hidden="true" tabindex="-1"></a>demo_of_condition_sums</span></code></pre></div>
 <pre><code>## # A tibble: 971 × 3
-##    highest_education with_doctorate numeric_with_doctorate
-##    &lt;chr&gt;             &lt;lgl&gt;                           &lt;dbl&gt;
-##  1 Secondary         FALSE                               0
-##  2 University        FALSE                               0
-##  3 University        FALSE                               0
-##  4 Secondary         FALSE                               0
-##  5 Primary           FALSE                               0
-##  6 Secondary         FALSE                               0
-##  7 Secondary         FALSE                               0
-##  8 Doctorate         TRUE                                1
-##  9 Secondary         FALSE                               0
-## 10 Secondary         FALSE                               0
-## # … with 961 more rows</code></pre>
+##   highest_education with_doctorate numeric_with_doctorate
+##   &lt;chr&gt;             &lt;lgl&gt;                           &lt;dbl&gt;
+## 1 Secondary         FALSE                               0
+## 2 University        FALSE                               0
+## 3 University        FALSE                               0
+## 4 Secondary         FALSE                               0
+## 5 Primary           FALSE                               0
+## # … with 966 more rows</code></pre>
 <p>The numeric values can then be added to produce a count of rows
 fulfilling the condition
 <code>highest_education == &quot;Doctorate&quot;</code>:</p>
@@ -2783,19 +2671,14 @@ treatments have an <code>NA</code> value:</p>
 <div class="sourceCode" id="cb66"><pre class="sourceCode r tgc-code-block"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a>yao <span class="sc">%&gt;%</span> </span>
 <span id="cb66-2"><a href="#cb66-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(treatment_combinations)</span></code></pre></div>
 <pre><code>## # A tibble: 971 × 1
-##    treatment_combinations        
-##    &lt;chr&gt;                         
-##  1 Paracetamol                   
-##  2 &lt;NA&gt;                          
-##  3 &lt;NA&gt;                          
-##  4 Antibiotics                   
-##  5 &lt;NA&gt;                          
-##  6 Paracetamol--Antibiotics      
-##  7 Traditional meds.             
-##  8 Paracetamol                   
-##  9 Paracetamol--Traditional meds.
-## 10 &lt;NA&gt;                          
-## # … with 961 more rows</code></pre>
+##   treatment_combinations
+##   &lt;chr&gt;                 
+## 1 Paracetamol           
+## 2 &lt;NA&gt;                  
+## 3 &lt;NA&gt;                  
+## 4 Antibiotics           
+## 5 &lt;NA&gt;                  
+## # … with 966 more rows</code></pre>
 <p>If you want to count the number of people who received <em>no
 treatment</em>, you would sum up those who meet the
 <code>is.na(treatment_combinations)</code> condition:</p>
@@ -2810,10 +2693,7 @@ treatment</em>, you would sum up those who meet the
 ## 3 Cité Verte                   46
 ## 4 Ekoudou                     133
 ## 5 Messa                        35
-## 6 Mokolo                       65
-## 7 Nkomkana                     53
-## 8 Tsinga                       56
-## 9 Tsinga Oliga                 47</code></pre>
+## # … with 4 more rows</code></pre>
 <p>These are the people with <code>NA</code> values for the
 <code>treatment_combinations</code> column.</p>
 <p>To count the people who <em>did</em> receive some treatment, you can
@@ -2829,10 +2709,7 @@ simply negate the <code>is.na()</code> function with <code>!</code>:</p>
 ## 3 Cité Verte                 26
 ## 4 Ekoudou                    57
 ## 5 Messa                      13
-## 6 Mokolo                     31
-## 7 Nkomkana                   22
-## 8 Tsinga                     25
-## 9 Tsinga Oliga               20</code></pre>
+## # … with 4 more rows</code></pre>
 <div class="practice">
 <p>Group your <code>yao</code> data frame by the respondents’ symptoms
 (<code>symptoms</code>) and count how many respondents have these
@@ -2870,55 +2747,40 @@ variable:</p>
 <div class="sourceCode" id="cb73"><pre class="sourceCode r tgc-code-block"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a>yao <span class="sc">%&gt;%</span></span>
 <span id="cb73-2"><a href="#cb73-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(occupation)</span></code></pre></div>
 <pre><code>## # A tibble: 28 × 2
-##    occupation                              n
-##    &lt;chr&gt;                               &lt;int&gt;
-##  1 Farmer                                  5
-##  2 Farmer--Other                           1
-##  3 Home-maker                             65
-##  4 Home-maker--Farmer                      2
-##  5 Home-maker--Informal worker             3
-##  6 Home-maker--Informal worker--Farmer     1
-##  7 Home-maker--Trader                      3
-##  8 Informal worker                       189
-##  9 Informal worker--Other                  2
-## 10 Informal worker--Trader                 4
-## # … with 18 more rows</code></pre>
+##   occupation                      n
+##   &lt;chr&gt;                       &lt;int&gt;
+## 1 Farmer                          5
+## 2 Farmer--Other                   1
+## 3 Home-maker                     65
+## 4 Home-maker--Farmer              2
+## 5 Home-maker--Informal worker     3
+## # … with 23 more rows</code></pre>
 <p>Note that this is the same output as:</p>
 <div class="sourceCode" id="cb75"><pre class="sourceCode r tgc-code-block"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a>yao <span class="sc">%&gt;%</span></span>
 <span id="cb75-2"><a href="#cb75-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(occupation) <span class="sc">%&gt;%</span> </span>
 <span id="cb75-3"><a href="#cb75-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">n =</span> <span class="fu">n</span>())</span></code></pre></div>
 <pre><code>## # A tibble: 28 × 2
-##    occupation                              n
-##    &lt;chr&gt;                               &lt;int&gt;
-##  1 Farmer                                  5
-##  2 Farmer--Other                           1
-##  3 Home-maker                             65
-##  4 Home-maker--Farmer                      2
-##  5 Home-maker--Informal worker             3
-##  6 Home-maker--Informal worker--Farmer     1
-##  7 Home-maker--Trader                      3
-##  8 Informal worker                       189
-##  9 Informal worker--Other                  2
-## 10 Informal worker--Trader                 4
-## # … with 18 more rows</code></pre>
+##   occupation                      n
+##   &lt;chr&gt;                       &lt;int&gt;
+## 1 Farmer                          5
+## 2 Farmer--Other                   1
+## 3 Home-maker                     65
+## 4 Home-maker--Farmer              2
+## 5 Home-maker--Informal worker     3
+## # … with 23 more rows</code></pre>
 <p>You can also apply <code>dplyr::count()</code> in a nested
 fashion:</p>
 <div class="sourceCode" id="cb77"><pre class="sourceCode r tgc-code-block"><code class="sourceCode r"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a>yao <span class="sc">%&gt;%</span></span>
 <span id="cb77-2"><a href="#cb77-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(sex, occupation)</span></code></pre></div>
 <pre><code>## # A tibble: 40 × 3
-##    sex    occupation                              n
-##    &lt;chr&gt;  &lt;chr&gt;                               &lt;int&gt;
-##  1 Female Farmer                                  3
-##  2 Female Home-maker                             65
-##  3 Female Home-maker--Farmer                      2
-##  4 Female Home-maker--Informal worker             3
-##  5 Female Home-maker--Informal worker--Farmer     1
-##  6 Female Home-maker--Trader                      3
-##  7 Female Informal worker                        77
-##  8 Female Informal worker--Trader                 1
-##  9 Female No response                             8
-## 10 Female Other                                   6
-## # … with 30 more rows</code></pre>
+##   sex    occupation                              n
+##   &lt;chr&gt;  &lt;chr&gt;                               &lt;int&gt;
+## 1 Female Farmer                                  3
+## 2 Female Home-maker                             65
+## 3 Female Home-maker--Farmer                      2
+## 4 Female Home-maker--Informal worker             3
+## 5 Female Home-maker--Informal worker--Farmer     1
+## # … with 35 more rows</code></pre>
 <div class="practice">
 <p>The <code>count()</code> verb gives you key information about your
 dataset in a very quick manner. Let’s look at our IgG results stratified
@@ -2987,52 +2849,28 @@ summary statistics. For example:</p>
 <pre><code>## `summarise()` has grouped output by &#39;sex&#39;. You can override using the `.groups` argument.</code></pre>
 <pre><code>## # A tibble: 18 × 4
 ## # Groups:   sex [2]
-##    sex    neighborhood count median_age
-##    &lt;chr&gt;  &lt;chr&gt;        &lt;int&gt;      &lt;dbl&gt;
-##  1 Female Briqueterie     61       28  
-##  2 Female Carriere       140       25.5
-##  3 Female Cité Verte      44       28  
-##  4 Female Ekoudou        110       26.5
-##  5 Female Messa           26       27.5
-##  6 Female Mokolo          53       23  
-##  7 Female Nkomkana        43       28  
-##  8 Female Tsinga          42       29  
-##  9 Female Tsinga Oliga    30       23.5
-## 10 Male   Briqueterie     45       28  
-## 11 Male   Carriere        96       27  
-## 12 Male   Cité Verte      28       22.5
-## 13 Male   Ekoudou         80       21.5
-## 14 Male   Messa           22       24.5
-## 15 Male   Mokolo          43       32  
-## 16 Male   Nkomkana        32       27  
-## 17 Male   Tsinga          39       27  
-## 18 Male   Tsinga Oliga    37       21</code></pre>
+##   sex    neighborhood count median_age
+##   &lt;chr&gt;  &lt;chr&gt;        &lt;int&gt;      &lt;dbl&gt;
+## 1 Female Briqueterie     61       28  
+## 2 Female Carriere       140       25.5
+## 3 Female Cité Verte      44       28  
+## 4 Female Ekoudou        110       26.5
+## 5 Female Messa           26       27.5
+## # … with 13 more rows</code></pre>
 <p>But <code>count()</code> can only yield counts:</p>
 <div class="sourceCode" id="cb84"><pre class="sourceCode r tgc-code-block"><code class="sourceCode r"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a>yao <span class="sc">%&gt;%</span> </span>
 <span id="cb84-2"><a href="#cb84-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(sex, neighborhood) <span class="sc">%&gt;%</span> </span>
 <span id="cb84-3"><a href="#cb84-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>()</span></code></pre></div>
 <pre><code>## # A tibble: 18 × 3
 ## # Groups:   sex, neighborhood [18]
-##    sex    neighborhood     n
-##    &lt;chr&gt;  &lt;chr&gt;        &lt;int&gt;
-##  1 Female Briqueterie     61
-##  2 Female Carriere       140
-##  3 Female Cité Verte      44
-##  4 Female Ekoudou        110
-##  5 Female Messa           26
-##  6 Female Mokolo          53
-##  7 Female Nkomkana        43
-##  8 Female Tsinga          42
-##  9 Female Tsinga Oliga    30
-## 10 Male   Briqueterie     45
-## 11 Male   Carriere        96
-## 12 Male   Cité Verte      28
-## 13 Male   Ekoudou         80
-## 14 Male   Messa           22
-## 15 Male   Mokolo          43
-## 16 Male   Nkomkana        32
-## 17 Male   Tsinga          39
-## 18 Male   Tsinga Oliga    37</code></pre>
+##   sex    neighborhood     n
+##   &lt;chr&gt;  &lt;chr&gt;        &lt;int&gt;
+## 1 Female Briqueterie     61
+## 2 Female Carriere       140
+## 3 Female Cité Verte      44
+## 4 Female Ekoudou        110
+## 5 Female Messa           26
+## # … with 13 more rows</code></pre>
 </div>
 </div>
 <div id="including-missing-combinations-in-summaries" class="section level1" number="10">
@@ -3056,7 +2894,7 @@ group:</p>
 ## 3 Female Senior                            26
 ## 4 Male   Adult                            267
 ## 5 Male   Child                            136
-## 6 Male   Senior                            19</code></pre>
+## # … with 1 more row</code></pre>
 <p>In the output data frame, there is one row for each combination of
 sex and age group (Female—Adult, Female—Child and so on).</p>
 <p>But what happens if one of these combinations is not present in the
@@ -3105,7 +2943,7 @@ summary statistic.</p>
 ## 3 Female Senior                            26
 ## 4 Male   Adult                            267
 ## 5 Male   Child                              0
-## 6 Male   Senior                            19</code></pre>
+## # … with 1 more row</code></pre>
 <p>What does the code do?</p>
 <ul>
 <li><p>First it converts the grouping variables to factors with
@@ -3127,21 +2965,14 @@ group:</p>
 <pre><code>## `summarise()` has grouped output by &#39;sex&#39;. You can override using the `.groups` argument.</code></pre>
 <pre><code>## # A tibble: 13 × 3
 ## # Groups:   sex [2]
-##    sex    highest_education     mean_age
-##    &lt;chr&gt;  &lt;chr&gt;                    &lt;dbl&gt;
-##  1 Female Doctorate                 28  
-##  2 Female No formal instruction     45.6
-##  3 Female No response               35  
-##  4 Female Primary                   26.8
-##  5 Female Secondary                 28.8
-##  6 Female University                31.5
-##  7 Male   Doctorate                 42.2
-##  8 Male   No formal instruction     37.9
-##  9 Male   No response               22  
-## 10 Male   Other                      5.5
-## 11 Male   Primary                   22.9
-## 12 Male   Secondary                 29.4
-## 13 Male   University                31.9</code></pre>
+##   sex    highest_education     mean_age
+##   &lt;chr&gt;  &lt;chr&gt;                    &lt;dbl&gt;
+## 1 Female Doctorate                 28  
+## 2 Female No formal instruction     45.6
+## 3 Female No response               35  
+## 4 Female Primary                   26.8
+## 5 Female Secondary                 28.8
+## # … with 8 more rows</code></pre>
 <p>Notice that in the output data frame, there are 7 rows for men but
 only 6 rows for women, because no woman answered “Other” to the question
 on highest education level.</p>
@@ -3155,22 +2986,14 @@ output data frame, you would run:</p>
 <pre><code>## `summarise()` has grouped output by &#39;sex&#39;. You can override using the `.groups` argument.</code></pre>
 <pre><code>## # A tibble: 14 × 3
 ## # Groups:   sex [2]
-##    sex    highest_education     mean_age
-##    &lt;fct&gt;  &lt;fct&gt;                    &lt;dbl&gt;
-##  1 Female Doctorate                 28  
-##  2 Female No formal instruction     45.6
-##  3 Female No response               35  
-##  4 Female Other                    NaN  
-##  5 Female Primary                   26.8
-##  6 Female Secondary                 28.8
-##  7 Female University                31.5
-##  8 Male   Doctorate                 42.2
-##  9 Male   No formal instruction     37.9
-## 10 Male   No response               22  
-## 11 Male   Other                      5.5
-## 12 Male   Primary                   22.9
-## 13 Male   Secondary                 29.4
-## 14 Male   University                31.9</code></pre>
+##   sex    highest_education     mean_age
+##   &lt;fct&gt;  &lt;fct&gt;                    &lt;dbl&gt;
+## 1 Female Doctorate                 28  
+## 2 Female No formal instruction     45.6
+## 3 Female No response               35  
+## 4 Female Other                    NaN  
+## 5 Female Primary                   26.8
+## # … with 9 more rows</code></pre>
 <div class="practice">
 <p>Using the <code>yao</code> data frame, let’s calculate the median age
 when grouping by neighborhood, age_category, and gender</p>
@@ -3273,7 +3096,7 @@ possibility to group your data using <code>group_by()</code>.</p>
 <p><code>group_by()</code> combined with <code>summarize()</code> is a
 one of the most common grouping manipulations.</p>
 <div class="figure">
-<img src="data:image/png;base64,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" alt="Fig: summarize() and its use combined with group_by()." width="400" />
+<img src="data:image/png;base64,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" alt="Fig: summarize() and its use combined with group_by()." width="400" />
 <p class="caption">Fig: summarize() and group_by()</p>
 </div>
 <p>However, you can also combine <code>group_by()</code> with many of
